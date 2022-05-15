@@ -6,13 +6,18 @@ This repository contains the source code for the 2021 Polimi Recommender System 
 
 The goal of the competition was to create the recommender system for TV programs by providing 10 recommended products to each user. 
 
-## Data
+## The Competition
 
-Given the User Rating Matrix and four Item Content Matrices we had to recommend 10 relevant tv shows to the users. 
+Goal:
 
-The URM contained 5M interactions, 13650 users and 18059 item and a sparsity of 97.86 %.
+The application domain is TV programs recommendation. The datasets we provide contains both interactions between users and TV shows, as well as features related to the shows. The main goal of the competition is to discover which items (TV shows) a user will interact with.
+Each TV show (for instance, "The Big Bang Theory") can be composed by several episodes (for instance, episode 5, season 3). The goal of the recommender system is not recommend a specific episode, but to recommend the TV show.
 
-The ICMs contained information about the channels, episodes, genre and subgenre of the shows.
+Description:
+
+The datasets includes around 6.2M interactions, 13k users, 18k items (TV shows) and four feature categories: 8 genres, 213 channels, 113 subgenres and 358k events (episode ids).
+The training-test split is done via random holdout, 85% training, 15% test.
+The goal is to recommend a list of 10 potentially relevant items for each user. MAP@10 is used for evaluation. You can use any kind of recommender algorithm you wish e.g., collaborative-filtering, content-based, hybrid, etc. written in Python.
 
 ## Recommender
 
